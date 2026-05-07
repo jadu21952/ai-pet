@@ -1,0 +1,14 @@
+const d = window.SITE_DATA;
+const fmt = n => `${d.currency}${Number(n).toLocaleString('en-IN')}`;
+document.querySelectorAll('[data-text]').forEach(el=>{ const k=el.dataset.text; if(d[k]) el.textContent=d[k]; });
+document.getElementById('productHero').src=d.productImage;
+document.getElementById('priceHero').textContent=fmt(d.price);
+document.getElementById('oldPriceHero').textContent=fmt(d.oldPrice);
+document.getElementById('priceBig').textContent=fmt(d.price);
+document.getElementById('whatsappLink').href=`https://wa.me/${d.supportWhatsApp}`;
+const icons=['💬','🔔','🔎','🤖','🎯','🎮','🌤️','👜'];
+document.getElementById('featureGrid').innerHTML=d.features.map((f,i)=>`<article><div class="icon">${icons[i]||'✦'}</div><h3>${f[0]}</h3><p>${f[1]}</p></article>`).join('');
+document.getElementById('cannotGrid').innerHTML=d.cannotDo.map(x=>`<div><b>⚠</b><br>${x}</div>`).join('');
+document.getElementById('reviewGrid').innerHTML=d.reviews.map(r=>`<div class="review"><b>★★★★★</b><h3>${r[0]}</h3><p>${r[1]}</p></div>`).join('');
+document.getElementById('faqList').innerHTML=d.faqs.map(f=>`<div class="faq-item"><div class="faq-q">${f[0]}<span>+</span></div><div class="faq-answer">${f[1]}</div></div>`).join('');
+document.querySelectorAll('.faq-item').forEach(item=>item.addEventListener('click',()=>item.classList.toggle('open')));

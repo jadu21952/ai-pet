@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Checkout - AI PET</title><link rel="stylesheet" href="style.css"/><script defer src="site-data.js"></script><script defer src="checkout.js"></script><script src="https://checkout.razorpay.com/v1/checkout.js"></script></head><body>
+<header class="nav glass"><a class="brand" href="index.html"><span class="bot-logo">☻</span><strong>AI PET</strong></a><span class="secure">🔒 Secure Checkout</span></header>
+<main class="checkout-wrap">
+  <div class="steps"><span class="done">✓ Step 1<br><small>Cart</small></span><span class="active">2 Step 2<br><small>Checkout</small></span><span>3 Step 3<br><small>Confirmation</small></span></div>
+  <section class="checkout-grid">
+    <form id="checkoutForm" class="glass form-card">
+      <h1>Customer & Shipping Details</h1><p>Please enter your details to place the order</p>
+      <label>Full Name<input required name="name" placeholder="Enter your full name"></label>
+      <div class="form-row"><label>Mobile Number<input required name="phone" placeholder="Enter mobile number" pattern="[0-9]{10,15}"></label><label>Email Address<input required name="email" type="email" placeholder="Enter email address"></label></div>
+      <label>Address Line 1<input required name="address1" placeholder="House / Building / Street"></label>
+      <label>Address Line 2<input name="address2" placeholder="Apartment, suite, landmark (optional)"></label>
+      <div class="form-row three"><label>City<input required name="city" placeholder="City"></label><label>State<input required name="state" placeholder="State"></label><label>Pincode<input required name="pincode" placeholder="Pincode"></label></div>
+      <label>Country<input value="India" name="country"></label>
+      <h2>Payment Method</h2>
+      <div class="pay-option selected">💳 UPI / Card / NetBanking <small>Powered by Razorpay</small></div>
+      <button class="btn full" type="submit">Proceed to Payment 🔒</button>
+      <a class="back" href="index.html">← Back to Product</a>
+    </form>
+    <aside class="side-stack">
+      <div class="glass summary"><h2>Order Summary</h2><div class="summary-product"><img src="assets/product-main.png"><div><b>AI PET Smart Companion</b><small>Your Smart AI Pet</small></div></div><div class="line"><span>Subtotal</span><b id="subtotal">₹9,999</b></div><div class="line"><span>Shipping</span><b>Free</b></div><div class="line total"><span>Total Amount</span><b id="total">₹9,999</b></div></div>
+      <div class="glass estimate"><h2>Delivery Estimate</h2><p>🚚 Estimated Delivery</p><strong>3–7 business days</strong><p>Fast & reliable delivery across India.</p></div>
+      <div class="glass trust"><h2>Safe. Secure. Trusted.</h2><p>🔐 256-bit SSL encrypted checkout</p><p>✅ 100% secure payments</p><p>↩ 7-day easy return/replacement</p><p>🎧 Customer support</p></div>
+    </aside>
+  </section>
+</main></body></html>

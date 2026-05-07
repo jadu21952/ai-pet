@@ -1,0 +1,1 @@
+{"name":"ai-pet-single-product-site","version":"1.0.0","private":true,"scripts":{"start":"npx wrangler pages dev .","deploy":"npx wrangler pages deploy ."},"devDependencies":{"wrangler":"latest"}}
